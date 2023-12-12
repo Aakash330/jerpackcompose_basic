@@ -40,6 +40,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.view.GravityCompat
+import com.yatra.composebasic.activity.SideEffect
 import com.yatra.composebasic.ui.theme.ComposeBasicTheme
 
 class MainActivity : ComponentActivity() {
@@ -126,6 +127,10 @@ private fun showTextView()
         }
         ) {
           Text(text = "Quote Example")
+        }
+        Button(onClick = { startActivity(Intent(applicationContext,SideEffect::class.java)) }) {
+            Text(text = "Side effect")
+            
         }
 
     }
